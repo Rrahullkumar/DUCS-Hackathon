@@ -9,7 +9,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const Result = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
-  const { score, total, questType, recommendations } = state || {};
+  const { score, total, questType } = state || {};
 
   // Dummy leaderboard data
   const leaderboard = [
@@ -28,6 +28,10 @@ const Result = () => {
       hoverBackgroundColor: ['#4338CA', '#C7D2FE'],
       borderWidth: 0,
     }]
+  };
+
+  const handleAILearningPathClick = () => {
+    window.location.href = "https://rrahullkumar-learning-path-ai-app-hmyx5r.streamlit.app/";
   };
 
   return (
@@ -55,26 +59,23 @@ const Result = () => {
             </div>
           </div>
 
-          {/* Recommendations */}
-          <div className="bg-white backdrop-blur-lg rounded-3xl p-8 shadow-lg border border-slate-100">
-            <h2 className="text-2xl font-semibold mb-6 text-teal-600">
-              AI Learning Path
+          {/* AI Learning Path Button */}
+          <div className="bg-white backdrop-blur-lg rounded-3xl p-8 shadow-lg border border-slate-100 flex flex-col items-center justify-center">
+            <h2 className="text-2xl font-semibold mb-6 text-teal-600 text-center">
+              Personalized Learning
             </h2>
-            <div className="space-y-4">
-              {recommendations?.map((rec, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ x: -20 }}
-                  animate={{ x: 0 }}
-                  className="p-4 bg-indigo-50/50 rounded-lg hover:bg-indigo-50 transition-colors group"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="h-2 w-2 bg-indigo-400 rounded-full transition-colors group-hover:bg-indigo-600" />
-                    <span className="text-slate-700 group-hover:text-slate-900">{rec}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={handleAILearningPathClick}
+              className="px-6 py-4 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 
+                         text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+            >
+              GET YOUR SMART LEARNING PATH
+            </motion.button>
+            <p className="mt-4 text-slate-600 text-center">
+              Our AI will analyze your results and create a customized learning journey just for you!
+            </p>
           </div>
         </div>
 
