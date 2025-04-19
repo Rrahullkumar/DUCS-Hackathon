@@ -25,7 +25,7 @@ const HeroSection = ({ user, onStartQuest }) => {
       >
         {/* Animated Heading */}
         <motion.h1
-          className="text-6xl md:text-8xl font-bold mb-4"
+          className="text-6xl md:text-8xl font-bold mb-4 [text-shadow:_0_2px_8px_rgba(0,0,0,0.8)]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -35,7 +35,7 @@ const HeroSection = ({ user, onStartQuest }) => {
 
         {/* Animated Paragraph */}
         <motion.p
-          className="text-xl md:text-2xl mb-8"
+          className="text-xl md:text-2xl mb-8 [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
@@ -50,7 +50,7 @@ const HeroSection = ({ user, onStartQuest }) => {
             if (user) navigate("/islands");
             else onStartQuest();
           }}
-          className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transform transition-all hover:scale-105"
+          className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg transform transition-all hover:scale-105 [text-shadow:_0_1px_2px_rgba(0,0,0,0.5)]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
@@ -65,15 +65,15 @@ const HeroSection = ({ user, onStartQuest }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          <div className="text-center">
+          <div className="text-center [text-shadow:_0_1px_4px_rgba(0,0,0,0.8)]">
             <span className="text-3xl font-bold">50k+</span>
             <p className="text-sm">Learners</p>
           </div>
-          <div className="text-center">
+          <div className="text-center [text-shadow:_0_1px_4px_rgba(0,0,0,0.8)]">
             <span className="text-3xl font-bold">5</span>
             <p className="text-sm">Islands</p>
           </div>
-          <div className="text-center">
+          <div className="text-center [text-shadow:_0_1px_4px_rgba(0,0,0,0.8)]">
             <span className="text-3xl font-bold">1M+</span>
             <p className="text-sm">Quests Completed</p>
           </div>
@@ -83,7 +83,7 @@ const HeroSection = ({ user, onStartQuest }) => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
         <svg
-          className="w-8 h-8 text-white"
+          className="w-8 h-8 text-white [text-shadow:_0_1px_4px_rgba(0,0,0,0.8)]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

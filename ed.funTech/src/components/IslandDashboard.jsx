@@ -86,7 +86,7 @@ const GamesDropdown = ({ navigate }) => {
           onClick={() => setIsOpen(!isOpen)}
           className="bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-3 rounded-xl flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
         >
-          <span className="text-white font-semibold">Code Games</span>
+          <span className="text-white font-semibold">Coding Challenges</span>
           <FiChevronDown className={`text-white transition-transform ${isOpen ? 'rotate-180' : ''}`} />
         </button>
 
